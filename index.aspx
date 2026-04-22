@@ -1,6 +1,7 @@
-<?php
-$year = date("Y");
-?>
+<%@ Page Language="C#" %>
+<%
+    int year = DateTime.Now.Year;
+%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -78,31 +79,8 @@ button {
 <button onclick="spawnPopups()">DOWNLOAD NOW !!! (FREE $$$)</button>
 
 <div style="position:absolute;bottom:10px;width:100%;text-align:center;font-size:10px;">
-© 1999–<?php echo $year; ?> Definitely Legit Corporation™
+© 1999–<%= year %> Definitely Legit Corporation™
 </div>
-
-<script>
-function spawnPopups() {
-  for (let i = 0; i < 6; i++) {
-    let p = document.createElement("div");
-    p.className = "popup";
-    p.style.top = Math.random() * window.innerHeight + "px";
-    p.style.left = Math.random() * window.innerWidth + "px";
-
-    p.innerHTML = `
-      <b>WARNING!!!</b><br>
-      Your PC is experiencing LOW FUN LEVELS.<br><br>
-      Install BALDYS BASUCS immediately!!!
-      <br><br>
-      <button onclick="this.parentElement.remove()">X</button>
-    `;
-
-    document.body.appendChild(p);
-
-    setTimeout(() => p.remove(), 7000);
-  }
-}
-</script>
 
 </body>
 </html>
