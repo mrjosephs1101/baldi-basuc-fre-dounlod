@@ -1,81 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>BALDYS BASUCS OFICIAL FRE DOUNLOD</title>
+  <meta charset="UTF-8">
+  <title>BALDYS BASUC OFICIAL WEBSIT</title>
+  <style>
+    * {
+      cursor: url('cursor.png'), auto;
+      font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+      box-sizing: border-box;
+    }
+    *:active {
+      cursor: url('cursor-clicked.png'), auto;
+    }
 
-<style>
-body {
-  margin: 0;
-  font-family: "Comic Sans MS", cursive;
-  background: linear-gradient(45deg, yellow, pink, lime, cyan);
-  animation: bg 5s linear infinite;
-  overflow: hidden;
-}
+    body {
+      background-color: #1155BB;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 38px, rgba(0,0,60,0.2) 38px, rgba(0,0,60,0.2) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 38px, rgba(0,0,60,0.2) 38px, rgba(0,0,60,0.2) 40px);
+      margin: 0;
+      padding: 0;
+    }
 
-@keyframes bg {
-  0% { filter: hue-rotate(0deg); }
-  100% { filter: hue-rotate(360deg); }
-}
+    .site-header {
+      background-color: #000;
+      width: 100%;
+      border-bottom: 3px solid #33AA33;
+      overflow: hidden;
+    }
 
-h1 {
-  text-align: center;
-  color: red;
-  font-size: 3rem;
-  text-shadow: 2px 2px black;
-  animation: shake 0.2s infinite;
-}
+    .header-title {
+      display: block;
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 48px;
+      font-weight: bold;
+      color: #66FF00;
+      text-shadow:
+        -3px -3px 0 #003300,
+         3px -3px 0 #003300,
+        -3px  3px 0 #003300,
+         3px  3px 0 #003300,
+         0px  6px 0 #001100;
+      letter-spacing: 3px;
+      padding: 10px 14px 8px 14px;
+      -webkit-text-stroke: 2px #002200;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: clip;
+    }
 
-@keyframes shake {
-  0% { transform: translate(1px,1px); }
-  50% { transform: translate(-2px,2px); }
-  100% { transform: translate(1px,-1px); }
-}
+    .search-bar {
+      background-color: #DDDDDD;
+      padding: 4px 8px;
+      border-bottom: 2px solid #999;
+      font-size: 12px;
+    }
 
-button {
-  display: block;
-  margin: 40px auto;
-  padding: 20px 40px;
-  font-size: 22px;
-  background: red;
-  color: white;
-  border: 5px dashed black;
-  cursor: pointer;
-  animation: bounce 0.8s infinite;
-}
+    .search-bar input[type="text"] {
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 12px;
+      padding: 1px 4px;
+      border: 1px inset #aaa;
+      width: 160px;
+    }
 
-@keyframes bounce {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
-}
+    .search-bar input[type="submit"] {
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 12px;
+      padding: 1px 8px;
+      margin-left: 4px;
+      background-color: #C0C0C0;
+      border: 2px outset #fff;
+      cursor: url('cursor.png'), pointer;
+    }
 
-.popup {
-  position: absolute;
-  width: 220px;
-  background: white;
-  border: 4px solid red;
-  padding: 10px;
-  font-size: 12px;
-}
-</style>
+    .musik-bar {
+      background-color: #DDDDDD;
+      padding: 3px 8px;
+      border-bottom: 2px solid #999;
+      font-size: 12px;
+    }
 
+    .musik-bar button {
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 12px;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: url('cursor.png'), pointer;
+      color: #000;
+    }
+
+    .page-wrapper {
+      display: flex;
+      width: 100%;
+      min-height: 100vh;
+      align-items: flex-start;
+    }
+
+    .side-panel {
+      flex: 1;
+      min-height: 100%;
+    }
+
+    .content-col {
+      width: 420px;
+      min-width: 420px;
+      background-color: #FFFFFF;
+      padding: 16px 16px 28px 16px;
+      border-left: 2px solid #AAAAAA;
+      border-right: 2px solid #AAAAAA;
+      font-size: 13px;
+      color: #000000;
+      line-height: 1.55;
+    }
+
+    h1.page-title {
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 21px;
+      font-weight: bold;
+      color: #000;
+      margin: 0 0 10px 0;
+    }
+
+    h2.section-heading {
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 18px;
+      font-weight: bold;
+      color: #000;
+      margin: 20px 0 6px 0;
+    }
+
+    p { margin: 0 0 9px 0; }
+
+    ul.dot-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 10px 0;
+    }
+
+    ul.dot-list li {
+      padding: 1px 0 1px 2px;
+      font-size: 13px;
+      color: #000;
+    }
+
+    ul.dot-list li::before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: #0033CC;
+      border-radius: 50%;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+
+    .bald-icon {
+      width: 56px;
+      height: 56px;
+      background-color: #FF8800;
+      border: 3px solid #000;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin: 10px 0;
+    }
+
+    a { color: #0000CC; }
+    a:visited { color: #660099; }
+
+    .download-btn-wrap { margin: 14px 0 8px 0; }
+
+    .download-btn {
+      display: inline-block;
+      background-color: #44BB22;
+      border: 3px solid #226600;
+      border-radius: 32px;
+      color: #fff;
+      font-family: 'Comic Sans MS', cursive;
+      font-size: 22px;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 10px 32px 10px 22px;
+      text-shadow: 1px 1px 3px #000;
+      box-shadow: 2px 3px 7px #000;
+      cursor: url('cursor.png'), pointer;
+      letter-spacing: 1px;
+    }
+
+    .download-btn:hover { background-color: #55DD33; }
+    .download-btn:active {
+      cursor: url('cursor-clicked.png'), pointer;
+      background-color: #339911;
+      box-shadow: 1px 1px 2px #000;
+    }
+
+    .best-viewed {
+      font-weight: bold;
+      font-size: 13px;
+      margin: 14px 0 4px 0;
+    }
+
+    .bottom-strip {
+      border-top: 2px solid #ccc;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 8px 0 0 0;
+      margin-top: 10px;
+    }
+
+    .bottom-img {
+      width: 88px;
+      height: 68px;
+      background-color: #88AAFF;
+      border: 2px solid #0033CC;
+      margin: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-size: 24px;
+      gap: 2px;
+    }
+
+    .bottom-img span.lbl {
+      font-size: 9px;
+      color: #000;
+      text-align: center;
+    }
+
+    hr { border: none; border-top: 1px solid #ccc; margin: 12px 0; }
+  </style>
 </head>
-
 <body>
 
-<h1>BALDYS BASUCS OFICIAL FRE DOUNLOD</h1>
-
-<p style="text-align:center;">
-✔ 100% SAFE (probably)<br>
-✔ NO VIRUS (trust me bro)<br>
-✔ Works on ALL systems (even toaster)
-</p>
-
-<button onclick="spawnPopups()">DOWNLOAD NOW !!! (FREE $$$)</button>
-
-<div style="position:absolute;bottom:10px;width:100%;text-align:center;font-size:10px;">
-© 1999–2026 Definitely Legit Corporation™
+<div class="site-header">
+  <span class="header-title">BALDYS BASUC OFICIAL WEBSIT</span>
 </div>
+
+<div class="search-bar">
+  <input type="text" placeholder="search this site...">
+  <input type="submit" value="FIND">
+</div>
+
+<div class="musik-bar">
+  <button>&#9658; PLAY MENU MUSIK</button>
+</div>
+
+<div class="page-wrapper">
+  <div class="side-panel"></div>
+
+  <div class="content-col">
+
+    <h1 class="page-title">WELCOME TO THE BALDYS BASICS WEBSITE</h1>
+
+    <p>Baldys Basics is a game. The game begins when you enter the skool. The skool has always been there. The skool moves forward without stopping. You are responsible for the notebooks. The bald man is waiting. The bald man has always been waiting. This is the nature of Baldys Basics.</p>
+
+    <ul class="dot-list">
+      <li>you enter the skool at the beginning</li>
+      <li>the bald man teaches you the correct answers</li>
+      <li>some answers are not correct and he knows this</li>
+      <li>the ruler makes a sound and the sound gets closer</li>
+      <li>the attempt ends and then the attempt begins again</li>
+      <li>this is correct and expected</li>
+    </ul>
+
+    <p>The first notebook is called the first notebook. Before the first notebook there was nothing. After the first notebook there is Back On Track. Each skool contains notebooks. The notebooks must be navigated in the correct order. Those who navigate incorrectly are returned to the beginning. The beginning is always the same. This is a feature of the skool.</p>
+
+    <p>The game was made by someone. The game exists on computers and on the itch website which is a place where games live. You can obtain the game for the price of free because it is free. After obtaining the game you may play it. You may also get the notebooks wrong. The bald man will know when you get them wrong. The bald man always knows. You may also make your own skool using the editor. The editor contains the same notebooks. Many people have placed notebooks. Some notebooks have correct answers. Some do not.</p>
+
+    <div class="bald-icon">&#128528;</div>
+
+    <p>All who have played this game know of and deeply respect the beloved <a href="#">bald man</a>. Bald man is the one who stays. Bald man is the one with the smile. Bald man does not choose to move. You choose when bald man moves. This is the agreement between you and bald man. Bald man has completed this agreement many thousands of times. Bald man will complete this agreement again.</p>
+
+    <ul class="dot-list">
+      <li>bald man enters the skool</li>
+      <li>bald man moves through the notebooks</li>
+      <li>bald man contacts the student</li>
+      <li>bald man returns the student to the beginning</li>
+      <li>bald man does not remember the previous student</li>
+      <li>you remember the previous attempt</li>
+      <li>this is the difference between you and bald man</li>
+    </ul>
+
+    <p>Baldys Basics teaches education. The ruler is the spike. The round face is bald man. The round face must find the student. This is the educational lesson. Students who understand this lesson may proceed to the next notebook. The next notebook also contains questions. There will always be more questions. There will always be more triangles. Bald man will always be there when you answer them.</p>
+
+    <p>Thank you for visiting this website about Baldys Basics. Please return when you are ready to learn more about the education. The education will be here. The education is always here. The bald man is also here. He is in this website right now. He can see this page. He sees you reading it. This is fine and normal.</p>
+
+    <h2 class="section-heading">DOUNLOD THE GAME</h2>
+
+    <p>You can dounlod Baldys Basics here for free on this websit. This is the latest version. Bald man is inside this version. Bald man has always been inside this version.</p>
+
+    <div class="download-btn-wrap">
+      <a class="download-btn" href="dounlod.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white" style="vertical-align:middle; margin-right:8px;">
+          <path d="M12 16l-6-6h4V4h4v6h4l-6 6z"/>
+          <path d="M4 20h16v-2H4v2z"/>
+        </svg>
+        DOUNLOD
+      </a>
+    </div>
+
+  </div>
+
+  <div class="side-panel"></div>
+</div>
+
+<script>
+  document.addEventListener('mousedown', function() {
+    document.documentElement.style.cursor = "url('cursor-clicked.png'), auto";
+  });
+  document.addEventListener('mouseup', function() {
+    document.documentElement.style.cursor = "url('cursor.png'), auto";
+  });
+</script>
 
 </body>
 </html>
