@@ -23,7 +23,7 @@
       margin: 0;
       background-image: url("title_final.png");
       background-repeat: repeat;            /* tile horizontally and vertically (default) */
-      background-size: auto;           /* stretch the tile to fill width and height */
+      background-size: auto;                /* tile at natural size */
       background-attachment: fixed;         /* keeps it fixed while scrolling */
     }
 
@@ -177,7 +177,22 @@
     a { color: #0000CC; }
     a:visited { color: #660099; }
 
-    .download-btn-wrap { margin: 14px 0 8px 0; }
+    /* Download button area */
+    .download-btn-wrap {
+      margin: 14px 0 8px 0;
+      width: 100%;          /* match content-col width */
+    }
+
+    .download-btn {
+      display: block;       /* make the <a> block-level */
+      width: 100%;          /* fill the wrapper */
+    }
+
+    .download-btn img {
+      display: block;       /* remove inline-gap */
+      width: 100%;          /* stretch to full button width */
+      height: auto;         /* keep aspect ratio */
+    }
 
     .best-viewed {
       font-weight: bold;
@@ -275,7 +290,7 @@
 
     <div class="download-btn-wrap">
       <a class="download-btn" href="dounlod.html">
-        <img src="dounlod-buton.png">
+        <img src="dounlod-buton.png" alt="Download Baldys Basics">
       </a>
     </div>
 
