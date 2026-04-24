@@ -13,21 +13,21 @@
 
     /* Default custom cursor for everything */
     * {
-      cursor: url('cursor.png') 0 0, auto;
+      cursor: url('cursor.png') 0 0, none;
       font-family: 'Comic Sans MS', 'Comic Sans', cursive;
       box-sizing: border-box;
     }
 
     /* Clicked state cursor */
     *:active {
-      cursor: url('cursor-clicked.png') 0 0, auto;
+      cursor: url('cursor-clicked.png') 0 0, none;
     }
 
     body {
       margin: 0;
       background-image: url("title_final.png");
       background-repeat: repeat;            /* tile horizontally and vertically (default) */
-      background-size: 100% 100%;           /* stretch the tile to fill width and height */
+      background-size: auto;           /* stretch the tile to fill width and height */
       background-attachment: fixed;         /* keeps it fixed while scrolling */
     }
 
