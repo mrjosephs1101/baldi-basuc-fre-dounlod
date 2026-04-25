@@ -35,16 +35,14 @@
     }
 
     .header-title {
-      display: block;
-      font-family: 'Comic Sans MS', sans-serif;
-      font-size: 38px;
-      font-weight: bold;
-      color: #66FF00;
-      letter-spacing: 3px;
-      padding: 10px 14px 8px 14px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: clip;
+      display: block;       /* make the <a> block-level */
+      width: 100%;          /* fill the wrapper */
+    }
+
+    .header-title img {
+      display: block;       /* remove inline-gap */
+      width: 100%;          /* stretch to full button width */
+      height: auto;         /* keep aspect ratio */
     }
 
     .search-bar {
@@ -227,7 +225,9 @@
 <body>
 
 <div class="site-header">
-  <span class="header-title">BALDYS BASUC OFICIAL WEBSIT</span>
+  <span class="header-title">
+    <img src="headr-img.png">
+  </span>
 </div>
 
 <div class="search-bar">
