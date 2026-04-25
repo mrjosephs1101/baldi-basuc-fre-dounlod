@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BALDYS BASUC OFICIAL WEBSIT</title>
-  <link rel="icon" href="GameIcon.png" type="image/png">
+  /png">
   <style>
 
     /* Default custom cursor for everything */
@@ -236,7 +236,7 @@
 </div>
 
 <div class="musik-bar">
-  <button>&#9658; PLAY MENU MUSIK</button>
+  <button id="play-musik-btn">&#9658; PLAY MENU MUSIK</button>
 </div>
 
 <div class="page-wrapper">
@@ -249,12 +249,12 @@
     <p>Baldys Basucs is a game. The game begins when you enter the skool. The skool has always been there. The skool moves forward without stopping. You are responsible for the notebooks. The bald man is waiting. The bald man has always been waiting. This is the nature of Baldys Basics.</p>
 
     <ul class="dot-list">
-      <li>you enter the skool at the beginning</li>
-      <li>the bald man teaches you the correct answers</li>
-      <li>some answers are not correct and he knows this</li>
-      <li>the ruler makes a sound and the sound gets closer</li>
-      <li>the attempt ends and then the attempt begins again</li>
-      <li>this is correct and expected</li>
+      >you enter the skool at the beginning</li>
+      >the bald man teaches you the correct answers</li>
+      >some answers are not correct and he knows this</li>
+      >the ruler makes a sound and the sound gets closer</li>
+      >the attempt ends and then the attempt begins again</li>
+      >this is correct and expected</li>
     </ul>
 
     <p>The first notebook is called the first notebook. Before the first notebook there was nothing. After the first notebook there is the second notebook. Each skool contains notebooks. The notebooks must be navigated in the correct order. Those who navigate incorrectly are returned to the menu. The menu is always the same. This is a feature of the skool.</p>
@@ -264,13 +264,13 @@
     <p>All who have played this game know of and deeply respect the beloved <a href="#">bald man</a>. Bald man is the one who stays. Bald man is the one with the smile. Bald man does not choose to move. You choose when bald man moves. This is the agreement between you and bald man. Bald man has completed this agreement many thousands of times. Bald man will complete this agreement again.</p>
 
     <ul class="dot-list">
-      <li>bald man enters the skool</li>
-      <li>bald man moves through the notebooks</li>
-      <li>bald man contacts the student</li>
-      <li>bald man returns the student to the beginning</li>
-      <li>bald man does not remember the previous student</li>
-      <li>you remember the previous attempt</li>
-      <li>this is the difference between you and bald man</li>
+      >bald man enters the skool</li>
+      >bald man moves through the notebooks</li>
+      >bald man contacts the student</li>
+      >bald man returns the student to the beginning</li>
+      >bald man does not remember the previous student</li>
+      >you remember the previous attempt</li>
+      >this is the difference between you and bald man</li>
     </ul>
 
     <p>Baldys Basics teaches education. The ruler is the spike. The round face is bald man. The round face must find the student. This is the educational lesson. Students who understand this lesson may proceed to the next notebook. The next notebook also contains questions. There will always be more questions. Bald man will always be there when you answer them.</p>
@@ -282,7 +282,7 @@
     <p>You can dounlod Baldys Basics here for free on this websit. This is the latest version. Bald man is inside this version. Bald man has always been inside this version.</p>
 
     <div class="download-btn-wrap">
-      <a class="download-btn" href="dounlod.html">
+      <a class="download-btn" id="download-btn" href="dounlod.html">
         <img src="dounlod-buton.png" alt="Download Baldys Basics">
       </a>
     </div>
@@ -291,6 +291,36 @@
 
   <div class="side-panel"></div>
 </div>
+
+<!-- audio element for menu music -->
+<audio id="menu-musik" src="musik-cul.wav" loop></audio>
+
+<script>
+  const playBtn = document.getElementById('play-musik-btn');
+  const downloadLink = document.getElementById('download-btn');
+  const musik = document.getElementById('menu-musik');
+
+  // ensure looping
+  musik.loop = true;
+
+  playBtn.addEventListener('click', () => {
+    // start or restart the looping music
+    musik.currentTime = 0;
+    musik.play();
+  });
+
+  downloadLink.addEventListener('click', () => {
+    // stop the music when going to the download page
+    musik.pause();
+    musik.currentTime = 0;
+  });
+
+  // optional: stop music if page is unloaded
+  window.addEventListener('beforeunload', () => {
+    musik.pause();
+    musik.currentTime = 0;
+  });
+</script>
 
 </body>
 </html>
