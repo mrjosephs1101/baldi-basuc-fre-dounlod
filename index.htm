@@ -140,8 +140,28 @@
 	inside this version.<br style="cursor: url(&quot;cursor.cur&quot;), auto;">
 &nbsp;</span></font><p>
 	<a href="dounlod.htm">
-		<img border="0" src="dounlod.png" width="429" height="112"></div>
+		<img border="0" src="dounlod.png" width="429" height="112">
 	</a>
+</div>
+
+<audio id="musikPlayer" loop>
+    <source src="musik-cul.wav" type="audio/wav">
+</audio>
+
+<script>
+const musikButton = document.querySelector('input[name="B5"]');
+const musikPlayer = document.getElementById('musikPlayer');
+
+musikButton.addEventListener('click', function () {
+    if (musikPlayer.paused) {
+        musikPlayer.play();
+        musikButton.value = "st0p musik";
+    } else {
+        musikPlayer.pause();
+        musikButton.value = "pl@y musik";
+    }
+});
+</script>
 
 </body>
 
